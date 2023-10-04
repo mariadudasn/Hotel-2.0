@@ -88,6 +88,24 @@ def main():
                                 else:
                                     print ("Quartos indisponíveis")
                                     os.system("pause")
+                            case 2:
+                                if quartoMaster.getQtdQuarto():
+                                    quartoMaster.setReservaQuarto(quartoMaster.getQtdQuarto() - 1)
+                                else:
+                                    print ("Quartos indisponíveis")
+                                    os.system("pause")
+                            case 3:
+                                if quartoSimples.getQtdQuarto():
+                                    quartoSimples.setReservaQuarto(quartoSimples.getQtdQuarto() - 1)
+                                else:
+                                    print ("Quartos indisponíveis")
+                                    os.system("pause")
+                            case 4:
+                                if quartoScasal.getQtdQuarto():
+                                    quartoScasal.setReservaQuarto(quartoScasal.getQtdQuarto() - 1)
+                                else:
+                                    print ("Quartos indisponíveis")
+                                    os.system("pause")
             
                 case 4:
                     pass

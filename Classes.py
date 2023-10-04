@@ -40,7 +40,7 @@ class Hotel:
             case _:
                 x = "Opção inválida"
 
-        self.reserva[self.idCli] = x
+        self.reserva[self.id] = x
 
 
 
