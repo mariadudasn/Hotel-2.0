@@ -19,10 +19,11 @@ def main():
             print("---MENU INICIAL---")
             print("01 - CADASTRAR CLIENTE")
             print("02 - DISPONIBILIDADE DE QUARTOS")
-            print("03 - RESERVAR QUARTO")
-            print("04 - CANCELAR RESERVA")
-            print("05 - LISTAR CLIENTES")
-            print("06 - LISTAR RESERVAS")
+            print("03 - SOBRE OS QUARTOS")
+            print("04 - RESERVAR QUARTO")
+            print("05 - CANCELAR RESERVA")
+            print("06 - LISTAR CLIENTES")
+            print("07 - LISTAR RESERVAS")
             print("00 - SAIR")
             print("--------")
             print("")
@@ -56,8 +57,30 @@ def main():
                     os.system("pause")
 
                 case 3:
+                    os.system ("cls")
+                    print("---SOBRE OS QUARTOS---") 
+                    print (" ")
+                    print ("---QUARTO DELUXE---")
+                    quartoLuxe.descricao()
+                    print (" ")
+                    print ("---QUARTO MASTER---")
+                    quartoMaster.descricao()
+                    print (" ")
+                    print ("---QUARTO Simples---")
+                    quartoSimples.descricao()
+                    print (" ")
+                    print ("---QUARTO Simples Casal---")
+                    quartoScasal.descricao()
+                    print (" ")
+                    print ("---QUARTO Duplo---")
+                    quartoDuplo.descricao()
+                    print (" ")
+                    print ("---QUARTO Duplo casal---")
+                    quartoDcasal.descricao()
+                    os.system("pause")
+
+                case 4:
                     os.system("cls")
-                    print("---DISPONIBILIDADE DE QUARTOS---")
                     print("---DISPONIBILIDADE DE QUARTOS---")
                     print(f"Quantidade de quartos DELUXE: {quartoLuxe.getQtdQuarto()}")
                     print(f"Quantidade de quartos MASTER: {quartoMaster.getQtdQuarto()}")
@@ -76,7 +99,12 @@ def main():
                     print("06 - DUPLO CASAL")
 
                     reservar = int(input(">> "))
-                    id2 = int(input("Informe o ID do Cliente: "))
+
+                    print (" ")
+                    print("---LISTA DE CLIENTES---")
+                    hotel.listarClientes()
+
+                    id2 = int(input("Informe o ID do Cliente que deseja reservar esse quarto: "))
 
                     if reservar > 0 and reservar <= 6:
                         hotel.reservarQuarto(id2, reservar)
@@ -122,7 +150,7 @@ def main():
                                     print ("Opção inválida")
                                     os.system("pause")
             
-                case 4:
+                case 5:
                     os.system("cls")
                     print("---LISTA DE RESERVAS---")
                     hotel.listarReservas()
@@ -136,13 +164,13 @@ def main():
                     hotel.cancelamento(id2)
 
 
-                case 5:
+                case 6:
                     os.system("cls")
                     print("---LISTA DE CLIENTES---")
                     hotel.listarClientes()
                     os.system("pause")
                 
-                case 6:
+                case 7:
                     os.system("cls")
                     print("---LISTA DE RESERVAS---")
                     hotel.listarReservas()

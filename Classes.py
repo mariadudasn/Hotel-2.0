@@ -24,7 +24,7 @@ class Hotel:
         self.id2 = id2
         self.reservar = reservar
 
-        match self.reserva:
+        match self.reservar:
             case 1:
                 x = "Quarto Deluxe"
             case 2:
@@ -40,11 +40,11 @@ class Hotel:
             case _:
                 x = "Opção inválida"
 
-        self.reserva[self.id2] = x
+        self.reserva[self.id2] = [x]
 
     def listarReservas(self):
-        for chave,valor in self.cliente.items():
-            print(f"ID:{chave} - Quarto: {valor[0]}")
+        for chave,valor in self.reserva.items():
+            print(f"ID:{chave} - Quarto: {valor}")
 
     def cancelamento(self, id2):
         if id2 in self.reserva:
