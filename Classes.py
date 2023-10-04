@@ -46,7 +46,11 @@ class Hotel:
         for chave,valor in self.cliente.items():
             print(f"ID:{chave} - Quarto: {valor[0]}")
 
-
+    def cancelamento(self, id):
+        if id in self.reserva:
+            del self.reserva[self.id]
+        else:
+            print("Cliente não encontrado")
 
 
 class Quarto:
