@@ -106,6 +106,21 @@ def main():
                                 else:
                                     print ("Quartos indisponíveis")
                                     os.system("pause")
+                            case 5:
+                                if quartoDuplo.getQtdQuarto():
+                                    quartoDuplo.setReservaQuarto(quartoDuplo.getQtdQuarto() - 1)
+                                else:
+                                    print ("Quartos indisponíveis")
+                                    os.system("pause")
+                            case 6:
+                                if quartoDcasal.getQtdQuarto():
+                                    quartoDcasal.setReservaQuarto(quartoDcasal.getQtdQuarto() - 1)
+                                else:
+                                    print ("Quartos indisponíveis")
+                                    os.system("pause")
+                            case _:
+                                    print ("Opção inválida")
+                                    os.system("pause")
             
                 case 4:
                     pass
