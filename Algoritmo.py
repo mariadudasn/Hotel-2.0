@@ -76,10 +76,10 @@ def main():
                     print("06 - DUPLO CASAL")
 
                     reservar = int(input(">> "))
-                    id = int(input("Informe o ID do Cliente: "))
+                    id2 = int(input("Informe o ID do Cliente: "))
 
                     if reservar > 0 and reservar <= 6:
-                        hotel.reservarQuarto(id, reservar)
+                        hotel.reservarQuarto(id2, reservar)
 
                         match reservar:
                             case 1:
@@ -131,9 +131,9 @@ def main():
 
                     print ("Qual o id do cliente que deseja cancelar reserva?")
 
-                    id = int(input(">> "))
+                    id2 = int(input(">> "))
 
-                    hotel.cancelamento(id)
+                    hotel.cancelamento(id2)
 
 
                 case 5:

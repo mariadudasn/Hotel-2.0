@@ -20,8 +20,8 @@ class Hotel:
         for chave,valor in self.cliente.items():
             print(f"ID:{chave} - Nome: {valor[0]} - CPF: {valor[1]} - Telefone: {valor[2]}")
 
-    def reservarQuarto(self, id, reservar):
-        self.id = id
+    def reservarQuarto(self, id2, reservar):
+        self.id2 = id2
         self.reservar = reservar
 
         match self.reserva:
@@ -40,15 +40,15 @@ class Hotel:
             case _:
                 x = "Opção inválida"
 
-        self.reserva[self.id] = x
+        self.reserva[self.id2] = x
 
     def listarReservas(self):
         for chave,valor in self.cliente.items():
             print(f"ID:{chave} - Quarto: {valor[0]}")
 
-    def cancelamento(self, id):
-        if id in self.reserva:
-            del self.reserva[self.id]
+    def cancelamento(self, id2):
+        if id2 in self.reserva:
+            del self.reserva[self.id2]
         else:
             print("Cliente não encontrado")
 
