@@ -42,6 +42,10 @@ class Hotel:
 
         self.reserva[self.id] = x
 
+    def listarReservas(self):
+        for chave,valor in self.cliente.items():
+            print(f"ID:{chave} - Quarto: {valor[0]}")
+
 
 
 

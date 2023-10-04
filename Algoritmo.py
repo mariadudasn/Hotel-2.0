@@ -132,7 +132,10 @@ def main():
                     os.system("pause")
                 
                 case 6:
-                    pass
+                    os.system("cls")
+                    print("---LISTA DE RESERVAS---")
+                    hotel.listarReservas()
+                    os.system("pause")
 
                 case 0:
                     print("SAINDO ...")
