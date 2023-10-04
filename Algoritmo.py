@@ -123,7 +123,17 @@ def main():
                                     os.system("pause")
             
                 case 4:
-                    pass
+                    print("---LISTA DE RESERVAS---")
+                    hotel.listarReservas()
+
+                    print (" ")
+
+                    print ("Qual o id do cliente que deseja cancelar reserva?")
+
+                    cReservas = int(input(">> "))
+                    id = int(input("Informe o ID do Cliente: "))
+                    
+                        
 
                 case 5:
                     os.system("cls")
